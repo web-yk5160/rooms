@@ -1,0 +1,57 @@
+<%= form_with(model: room, local: true) do |form| %>
+  <% if room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(room.errors.count, "error") %> prohibited this room from being saved:</h2>
+
+      <ul>
+      <% room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.number_field :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_daily_price %>
+    <%= form.check_box :has_daily_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :daily_price %>
+    <%= form.number_field :daily_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :has_hourly_price %>
+    <%= form.check_box :has_hourly_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hourly_price %>
+    <%= form.number_field :hourly_price %>
+  </div>
+
+  <div class="field">
+    <%= form.label :capacity %>
+    <%= form.number_field :capacity %>
+  </div>
+
+  <div class="field">
+    <%= form.label :reputation_score %>
+    <%= form.number_field :reputation_score %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

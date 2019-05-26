@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: 1
+  has_daily_price: false
+  daily_price: 1
+  has_hourly_price: false
+  hourly_price: 1
+  capacity: 1
+  reputation_score: 1
+
+two:
+  name: MyString
+  description: 1
+  has_daily_price: false
+  daily_price: 1
+  has_hourly_price: false
+  hourly_price: 1
+  capacity: 1
+  reputation_score: 1
